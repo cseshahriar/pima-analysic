@@ -78,8 +78,12 @@ else:
 
 
 # g) Draw a histogram for each numerical feature:
+# Select only the numerical features
+numerical_features = data.select_dtypes(include=['int64', 'float64'])
 
-data.hist(figsize=(10, 10))
+numerical_features.hist(bins=10, figsize=(12, 10))
+plt.tight_layout()
+plt.show()
 
 
 # h) Split the dataset into X and y:

@@ -7,6 +7,7 @@
 ## `Clone project: git clone https://github.com/cseshahriar/pima-analysic.git`
 ## `cd pima-analysis`
 ## `Create virtual environment: python3.8 im venv venv`
-## `source venv/bin/activate # for linux`
+## `for linux venv activate: source venv/bin/activate`
+## `for linux venv activate: venv\Scripts\activate`
 ## `pip3 install -r requirements.txt`
 ## `python3 pima.py # run python script`
