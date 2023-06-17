@@ -5,7 +5,7 @@
  - `cd pima-analysis`
  - `Create virtual environment: python3.8 im venv venv`
  - `for linux venv activate: source venv/bin/activate`
- - `for linux venv activate: venv\Scripts\activate`
+ - `for windows venv activate: venv\Scripts\activate`
  - `pip3 install -r jupyter_requirements.txt`
  - `jupyter notebook`
 
@@ -14,7 +14,7 @@
  - `cd pima-analysis`
  - `Create virtual environment: python3.8 im venv venv`
  - `for linux venv activate: source venv/bin/activate`
- - `for linux venv activate: venv\Scripts\activate`
+ - `for windows venv activate: venv\Scripts\activate`
  - `pip3 install -r requirements.txt`
  - `python3 pima.py
 
