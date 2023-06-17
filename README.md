@@ -1,8 +1,5 @@
 # pima-analysis
 
-# answer of j Plot train and test accuracy
-![DEMO](https://github.com/cseshahriar/pima-analysic/blob/main/pima_analysic_result.png)
-
 # Download & Setup Instructions for run with jupyter notebook
 ## `Clone project: git clone https://github.com/cseshahriar/pima-analysic.git`
 ## `cd pima-analysis`
@@ -22,3 +19,6 @@
 ## `pip3 install -r requirements.txt`
 ## `python3 pima.py # run python script`
 # `or run with jupyter notebook: jupyter notebook`
+
+# script and result screenshot  
+![DEMO](https://github.com/cseshahriar/pima-analysic/blob/main/pima_analysic_result.png)
