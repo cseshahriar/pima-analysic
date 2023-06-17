@@ -17,8 +17,7 @@
 ## `for linux venv activate: source venv/bin/activate`
 ## `for linux venv activate: venv\Scripts\activate`
 ## `pip3 install -r requirements.txt`
-## `python3 pima.py # run python script`
-# `or run with jupyter notebook: jupyter notebook`
+## `python3 pima.py
 
 # script and result screenshot  
 ![DEMO](https://github.com/cseshahriar/pima-analysic/blob/main/pima_analysic_result.png)
