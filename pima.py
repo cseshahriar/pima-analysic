@@ -11,30 +11,36 @@ from sklearn.model_selection import train_test_split
 
 # a) Read the dataset using pandas' DataFrame:
 data = pd.read_csv('diabetes.csv')
-print(f"The dataset \n {data}, {type(data)} \n\n")
+
+# extra settings for show all data in console
+pd.set_option('display.max_rows', 1000)
+pd.set_option('display.max_columns', 1000)
+pd.set_option('display.width', 1000)
+
+print(f"a) The dataset \n {data}, {type(data)} \n\n")
 # ans: [768 rows x 9 columns], <class 'pandas.core.frame.DataFrame'>
 
 
 # b) Find the number of instances and features:
 num_instances = data.shape[0]
 num_features = data.shape[1]
-print("Number of instances:", num_instances)  # ans: Number of instances: 768
-print("Number of features:", num_features, end='\n\n')  # ans: Number of features: 9
+print("b) Number of instances:", num_instances)  # ans: Number of instances: 768
+print("b) Number of features:", num_features, end='\n\n')  # ans: Number of features: 9
 
 
 # c) Check for missing entries:
 missing_entries = data.isnull().sum().sum()
 if missing_entries == 0:
-    print("The dataset has no missing entries.")
+    print("c) The dataset has no missing entries.")
 else:
-    print("The dataset has", missing_entries, "missing entries.")
+    print("c) The dataset has", missing_entries, "missing entries.")
 
 # ans: The dataset has no missing entries.
 
 
 # d) Count the number of instances for each outcome value:
 outcome_counts = data['Outcome'].value_counts()
-print(f"\nOutcome_counts {outcome_counts}")
+print(f"\nd) Outcome_counts {outcome_counts}")
 """
 Outcome
 0    500
@@ -45,7 +51,7 @@ Name: count, dtype: int64
 # e) Show the first 5 and last 5 instances:
 first_instances = data.head(5)
 last_instances = data.tail(5)
-print("\nFirst 5 instances:\n", first_instances, end='\n\n')
+print("\ne) First 5 instances:\n", first_instances, end='\n\n')
 """
 First 5 instances:
     Pregnancies  Glucose  BloodPressure  SkinThickness  Insulin   BMI  DiabetesPedigreeFunction  Age  Outcome
@@ -56,7 +62,7 @@ First 5 instances:
 4            0      137             40             35      168  43.1                     2.288   33        1
 """
 
-print("Last 5 instances:\n", last_instances, end='\n\n')
+print("e) Last 5 instances:\n", last_instances, end='\n\n')
 """
 Last 5 instances:
       Pregnancies  Glucose  BloodPressure  SkinThickness  Insulin   BMI  DiabetesPedigreeFunction  Age  Outcome
@@ -71,9 +77,9 @@ Last 5 instances:
 # f) Check if missing entries are replaced by zeros:
 zero_entries = (data == 0).sum().sum()
 if zero_entries > 0:
-    print("\nThe dataset contains", zero_entries, "zero entries.")
+    print("\nf) The dataset contains", zero_entries, "zero entries.")
 else:
-    print("\nThe dataset does not have missing entries replaced by zeros.")
+    print("\nf) The dataset does not have missing entries replaced by zeros.")
 # ans: The dataset contains 1263 zero entries.
 
 
@@ -89,8 +95,9 @@ plt.show()
 # h) Split the dataset into X and y:
 x = data.drop('Outcome', axis=1)
 y = data['Outcome']
-print(f"X {x}")
-print(f"y {y}")
+
+print(f"h) X {x}")
+print(f"h) y {y}")
 # Here, X contains all the predictors/features, and y contains the target class entries.
 
 # i) Split the dataset into train and test sets:
@@ -102,8 +109,6 @@ X_train, X_test, y_train, y_test = train_test_split(
 This code splits the dataset into an 80% train set and a 20% test set. 
 Adjust the test_size parameter if you want a different split ratio.
 """
-
-
 
 
 """
@@ -129,6 +134,5 @@ for k in k_values:
 
 # Plot train and test accuracy with respect to k
 plt.plot(k_values, train_accuracy, label='Train Accuracy')
-print("j ", plt)
 plt.show()  # result file test_accuracy_result.png
 
