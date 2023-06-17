@@ -1,6 +1,6 @@
 # pima-analysis
 
-![DEMO](https://github.com/cseshahriar/pima-analysic/test_accuracy_result.png)
+![DEMO](https://github.com/cseshahriar/pima-analysic/blob/main/test_accuracy_result.png)
 
 
 # Download & Setup Instructions for the backend
